@@ -1,0 +1,42 @@
+﻿<%@ Master Language="VB" CodeFile="adminMasterPage.master.vb" Inherits="adminMasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="banner">
+        <div id="wrapper">
+            </div>
+        <div id="menu">
+            <asp:Menu ID="Menu1" runat="server" BackColor="#FFFBD6" DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="18px" Font-Strikeout="True" Font-Underline="True" ForeColor="#990000" Orientation="Horizontal" StaticSubMenuIndent="10px">
+                <DynamicHoverStyle BackColor="#990000" ForeColor="White" />
+                <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                <DynamicMenuStyle BackColor="#FFFBD6" />
+                <DynamicSelectedStyle BackColor="#FFCC66" />
+                <Items>
+                    <asp:MenuItem NavigateUrl="~/CustomerRecords.aspx" Text="CustomerRecords" Value="CustomerRecords"></asp:MenuItem>
+                    <asp:MenuItem Text="Orderdetails" Value="Orderdetails"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/login.aspx" Text="Logout" Value="Logout"></asp:MenuItem>
+                </Items>
+                <StaticHoverStyle BackColor="#990000" ForeColor="White" />
+                <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                <StaticSelectedStyle BackColor="#FFCC66" />
+                <StaticItemTemplate>
+                    <%# Eval("Text") %>
+                </StaticItemTemplate>
+            </asp:Menu>
+            </div>
+
+        <asp:ContentPlaceHolder id="Contentbody" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

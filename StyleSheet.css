@@ -1,0 +1,29 @@
+﻿body {
+    font-family:Arial Black, Californian FB,Arial Baltic , Lucida Calligraphy, Tunga, Script MT Bold;
+     background-image:url();
+}
+.banner {
+}
+.wrapper {
+}
+.navigation {
+     height:35px;
+    background-color:lightcyan;
+ float :left  ;
+ text-align :center ;
+
+    }
+#menu1{
+     list-style:inherit ;
+     list-style :none ;
+  float :right ;
+  width :1000px;
+    height: 5px;
+    margin-left: 0px;
+    padding-right :100px;
+ 
+}
+.footer {
+
+}
+

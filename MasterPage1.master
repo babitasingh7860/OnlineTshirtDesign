@@ -1,0 +1,52 @@
+﻿<%@ Master Language="VB" CodeFile="MasterPage1.master.vb" Inherits="MasterPage1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+  
+    <link  href="StyleSheet.css" type ="text/css" rel ="stylesheet" />
+  
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="banner">
+
+        <div id="wrapper">
+                &nbsp;<img src="images/DigiteesBanner1.jpg"  style ="width :821px; height: 234px;" "/></div>
+                <div style="font-family: 'Times New Roman', Times, serif; font-size: 26px; font-style: inherit; color: #800000; background-color: #CCFF99;">
+                    Online Tshirt Design Project
+            </div>
+        <div id="navigation">
+      
+                    <asp:Menu ID="Menu1" runat="server" BackColor="#FFCCFF" DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="Medium" ForeColor="#990000" StaticSubMenuIndent="10px" CssClass="horizontal-separator" BorderColor="#990000" BorderStyle="None" BorderWidth="5px" Height="100%" ItemWrap="True" Orientation="Horizontal" Width="100%">
+                        <DynamicHoverStyle BackColor="#990000" ForeColor="White" BorderWidth="40px" />
+                        <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" BackColor="#FFCCCC" Font-Strikeout="True" ItemSpacing="5px" />
+                        <DynamicMenuStyle BackColor="#FFFBD6" HorizontalPadding="5px" Width="20px" />
+                        <DynamicSelectedStyle BackColor="#FFCC66" />
+                        <DynamicItemTemplate>
+                            <%# Eval("Text") %>
+                        </DynamicItemTemplate>
+                        <Items>
+                            <asp:MenuItem NavigateUrl="~/login.aspx" Text="Home" Value="Home"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/designtshirt.aspx" Text="Design Tshirt" Value="Design Tshirt"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/contactus.aspx" Text="Contact Us" Value="Contact Us"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/login.aspx" Text="Logout" Value="Logout"></asp:MenuItem>
+                        </Items>
+                        <StaticHoverStyle BackColor="#990000" ForeColor="White" />
+                        <StaticMenuItemStyle HorizontalPadding="10px" VerticalPadding="5px" ItemSpacing="30px" />
+                        <StaticSelectedStyle BackColor="#FFCC66" />
+                    </asp:Menu>
+                   
+            </div>
+        <asp:ContentPlaceHolder id="Contentbody" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        <div id="footer">
+            <p style="background-color: #800000; border-style: inset; display: list-item; font-size: medium; color: #FFFFFF">copyright@babita.singh</p>
+            </div>
+    </div>
+    </form>
+</body>
+</html>
